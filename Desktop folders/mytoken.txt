@@ -1,0 +1,8 @@
+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
+
+
+Ansible installation:
+
+1)sudo apt-add-repository ppa:ansible/ansible
+2)sudo apt update
+3)sudo apt install ansible

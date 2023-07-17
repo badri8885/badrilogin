@@ -1,0 +1,6 @@
+D:\devops\chef\mychef11june2023\chef-repo
+knife bootstrap <public ip of node> --ssh <username> --sudo --identity-file<your server pem location> -N <your chef node name>
+
+knife bootstrap 18.118.166.69 --ssh-user ubuntu --sudo --identity-file "C:\Users\dell\Desktop\myvpnkey.pem" -N mychefnode01
+
+D:\devops\chef\mychef11june2023\chef-repo\cookbooks\myfirstcookbook

@@ -1,0 +1,13 @@
+AKIAYMNFVPAPCIKPLIPN
+fn+QU0v1o8xMm4R+trKVFH5w6K3F4WXRUBtWQlf4
+
+
+- name: extract tomact tar file module
+  command:
+    cmd: sudo tar xzvf /home/ubuntu/apache-tomcat-10*tar.gz -C /opt/tomcat --strip-components=1
+    creates: 
+
+
+
+2)AKIAYMNFVPAPJZHI5JVB
+805gaYXiMwpT6HpC7YcJy+mj/lODJsn0T1LWRwQH

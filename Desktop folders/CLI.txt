@@ -1,0 +1,21 @@
+ create-vpc command to create a VPC with the specified IPv4 CIDR block
+ aws ec2 create-vpc --cidr-block 192.168.0.0/22 --query Vpc.VpcId --output text
+ vpc-0f7b81050d72bece8
+ vpc-03d051a9b3ee4839d
+ 
+ Create public subnets In production, Availability Zones.
+ aws ec2 create-subnet --vpc-id  vpc-03d051a9b3ee4839d --cidr-block 192.168.1.0/24 --availability-zone us-east-1a --query Subnet.SubnetId --output text
+ 
+ Create private subnets In production, Availability Zones.
+ aws ec2 create-subnet --vpc-id  vpc-03d051a9b3ee4839d --cidr-block 192.168.2.0/24 --availability-zone us-east-1b --query Subnet.SubnetId --output text
+ 
+ Create a public route in the route table 
+ aws ec2 create-route-table --vpc-id vpc-03d051a9b3ee4839d --query RouteTable.RouteTableId --output text
+ rtb-0a82a0fafd80287ae
+ 
+ Create a private route in the route table 
+ aws ec2 create-route-table --vpc-id vpc-03d051a9b3ee4839d --query RouteTable.RouteTableId --output text
+ rtb-0c8385bf248a7d47b
+ 
+ Associate the route table with the public subnet using the following associate-route-table
+ aws ec2 associate-route-table --route-table-id rtb-0a82a0fafd80287ae--subnet-id subnet-0a5e7f8aca2c5d74d
